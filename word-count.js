@@ -3,7 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-const WORD_COUNT_REGEX = /[0-9A-z]+/gm;
+const WORD_COUNT_REGEX = /[0-9A-Za-z]+/gm;
 
 export const countWords = (str) => {
   if ( ! str || str.length === 0) {
