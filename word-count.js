@@ -3,6 +3,20 @@
 // convenience to get you started writing code faster.
 //
 
-export const countWords = () => {
-  throw new Error('Remove this statement and implement this function');
+const WORD_COUNT_REGEX = /[0-9A-z]+/gm;
+
+export const countWords = (str) => {
+  if ( ! str || str.length === 0) {
+    return {};
+  }
+
+  const results = {};
+  str = str.toLowerCase();
+
+  str.match(WORD_COUNT_REGEX).forEach(s => {
+    if ( ! Object.prototype.hasOwnProperty.call(results, s)) results[s] = 0;
+    results[s]++;
+  });
+
+  return results;
 };
