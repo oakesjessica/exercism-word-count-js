@@ -1,0 +1,11 @@
+# Exercism
+.exercism/
+
+# JetBrains IDE
+.idea/
+
+# Mac
+.DS_Store
+
+# Project files
+node_modules/
