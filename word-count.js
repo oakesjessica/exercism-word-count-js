@@ -7,7 +7,6 @@
  *    TODO: find a REGEX-only way to handle both single-quoted words and contracted words with a leading apostrophe
  *      without false positive results, e.g. 'large, 'here is a bad match
  * /\b[0-9]+\b/ => capture digits only, exclude alphanumeric patterns, e.g. testing123, 123testing, test123test
- * Pattern does not include
 **/
 const WORD_COUNT_REGEX = /[A-Za-z']+\b|\b[0-9]+\b/gm;
 const SINGLE_QUOTED_WORDS_REGEX = /\s+?'([A-Za-z]+)'/gm;
