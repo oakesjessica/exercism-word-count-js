@@ -6,7 +6,7 @@
  * /\b[0-9]+\b/ => capture digits only, exclude alphanumeric patterns, e.g. testing123, 123testing, test123test
  *
 **/
-const WORD_COUNT_REGEX = /\b[A-Za-z+'A-Za-z]+\b|\b[0-9]+\b/gm;
+const WORD_COUNT_REGEX = /\b[A-Za-z'A-Za-z]+\b|\b[0-9]+\b/gm;
 
 export const countWords = (str) => {
   if ( ! str || str.length === 0) {
