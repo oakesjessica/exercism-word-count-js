@@ -1,9 +1,12 @@
-//
-// This is only a SKELETON file for the 'Word Count' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
-const WORD_COUNT_REGEX = /[0-9A-Za-z]+/gm;
+/**
+ * Currently only consider ASCII letters and digits
+ * /\b[A-Za-z+'A-Za-z]+\b/ => capture any character between word boundaries
+ *  Matches simple words, possessive and contractions *but*
+ *    currently drops the apostrophe with contracts like 'ow, and 'twas. It matches "ow" and "twas"
+ * /\b[0-9]+\b/ => capture digits only, exclude alphanumeric patterns, e.g. testing123, 123testing, test123test
+ *
+**/
+const WORD_COUNT_REGEX = /\b[A-Za-z+'A-Za-z]+\b|\b[0-9]+\b/gm;
 
 export const countWords = (str) => {
   if ( ! str || str.length === 0) {
